@@ -30,7 +30,7 @@ class Ui_MainWindow(object):
                                 " :" + str(self.get_command.toPlainText()) + "\n", "UTF-8"))
         time.sleep(1)
         ircmsg = self.baglan.recv(1024).decode("UTF-8")
-        self.item = QtGui.QStandardItem("Bot Message: " + ircmsg.split(":")[2])
+        self.item = QtGui.QStandardItem("Hedef'in Mesajı: " + ircmsg.split(":")[2])
         self.model.appendRow(self.item)
 
     def thread_calistir(self):
@@ -91,7 +91,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.send_command.setText(_translate("MainWindow", "Send Command"))
+        self.send_command.setText(_translate("MainWindow", "Kod Gönder"))
 
 
 if __name__=="__main__":
